@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   background-color: #282c34;
-  font-size:x-large;
+  font-size: x-large;
 }
 .padd {
   margin-top: 15px;
@@ -28,13 +28,13 @@ h2 {
   overflow: hidden;
   background-color: rgb(90, 61, 235);
 }
-.tap{
-    font-family: Helvetica;
-    font-size:30px;
-    font-weight:bold;
-    padding-left:80%;
-    padding-top:5px;
-    color:#f2f2f2
+.tap {
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 80%;
+  padding-top: 5px;
+  color: #f2f2f2;
 }
 /* Navbar links */
 #navbar a {
@@ -49,7 +49,7 @@ h2 {
 /* Page content */
 .content {
   padding: 16px;
-  font-family:sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
 }
 
@@ -58,11 +58,13 @@ h2 {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 3;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
+  z-index: 3;
 }
 
 /* button Css */
