@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>AU-50 BATCH</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"
+    />
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    
+   
+    <hr
+      style="
+        height: 2px;
+        border-width: 0;
+        color: rgb(134, 16, 174);
+        background-color: rgb(40,44, 52);
+        padding-top: 95px;
+      "
+    />
+
+    <div class="sticky content" id="navbar">
+      <a href="#home">Assignment</a>
+      <a href="./Codingchallenge.html">Coding Challenge</a>
+      <a href="./Notes.html">Notes</a>
+      <a href="./contact.html">Contact</a>
+      <div class="tap">Developed by Ajinkya Sir</div>
+     
+    </div>
+  
+    <h2 class="heading container">Week-3-Day5-Assignment</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+// Attainuid:#13
+// Q-1) Fizz Buzz
+// Given an integer n, return a string array answer (1-indexed) where:
+
+// answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
+// answer[i] == "Fizz" if i is divisible by 3.
+// answer[i] == "Buzz" if i is divisible by 5.
+// answer[i] == i (as a string) if none of the above conditions are true.
+//Run The code in Browser
+//ajinkya Assignment-week3-day05
+
+n = prompt("Enter a number");
+let result = [];
+for (let i = 1; i <= n; i++) {
+  var inarray = "";
+  if (i % 3 == 0 && i % 5 == 0) {
+    inarray += "FizzBuzz"; //array will get FizzBuzz
+  }
+  if (i % 3 == 0) {
+    inarray += "Fizz"; //array will get Fizz
+  }
+  if (i % 5 == 0) {
+    inarray += "Buzz"; //array will get Fizz
+  }
+  if (inarray === "") {
+    inarray += i; //array will get number
+  }
+  result.push(inarray);
+}
+console.log(result);
+
+           </code></p>
+        </pre>
+    </div>
+    <h2 class="heading container">Week-4-Day5-Assignment</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+/* ---------Week 4 – Day 5: Assignment------------
+(Maximum marks - 15)
+Attainuid:#26 
+Q-1) Write a program to print the index of the maximum value of an array of numbers using 
+any loop.  
+*/
+//
+// const prompt = require("prompt-sync")();
+// kindly run the code in browser
+
+var inputArray = []; //create an empty array
+var size = prompt("Enter number of elements in Array : "); //Array size
+
+for (var i = 0; i < size; i++) {
+  //Taking Array Input from user
+  inputArray[i] = prompt("Enter Array Element " + (i + 1) + " :  ");
+}
+
+//Print the array in the console.
+console.log("Your Input Array is  : " + inputArray);
+
+//searching for maximum number inside inputArray
+function Large(inputArray) {
+  
+  // The largest number at first should be the first element or null for empty array
+  var largest = inputArray[0] || null;
+
+  // Current number, handled by the loop
+  var number = null;
+  for (var i = 0; i < inputArray.length; i++) {
+    // Update current number
+    number = inputArray[i];
+
+    // Compares stored largest number with current number, stores the largest one
+    largest = Math.max(largest, number);
+  }
+
+  return largest;
+}
+p = Large(inputArray);
+
+// for loop to find index of element
+
+for (k = 0; k < inputArray.length; k++) {
+  if (inputArray[k] == p) {
+    index = k;
+  }
+}
+//function to print output
+function printoutput() {
+  console.log("---------------------------------------------------------");
+  console.log(
+    "Maximum number is " + p + " and it's Index in Array is " + index
+  );
+  console.log("---------------------------------------------------------");
+}
+printoutput();
+
+/* 
+---------output------------------------------------------
+
+Enter number of elements in Array : 5
+Enter Array Element 1 :  45
+Enter Array Element 2 :  69
+Enter Array Element 3 :  98
+Enter Array Element 4 :  78
+Enter Array Element 5 :  99
+Your Input Array is  : 45,69,98,78,99
+---------------------------------------------------------
+Maximum number is 99 and it's Index in Array is 4
+---------------------------------------------------------
+
+*/
+
+           </code></p>
+        </pre>
+    </div>
+    <h2 class="heading container">Week-5-Day5-Assignment</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+/* 
+Q-1) Write a function to sort an array of numbers.
+Input: [8,5,6,3]  
+Output: [3,5,6,8]
+week5-day5-Assignment
+*/
+// Run this  program in Node Js Terminal
+//---node week5-day5-Assignment.js <-------Copy paste to execute the program using Terminal
+// ==================Method-1=for custom inputs======================================
+const prompt = require("prompt-sync")(); //<------------------
+function ascending(a, b) {
+  return a - b;
+}
+function descending(a, b) {
+  return b - a;
+}
+arr = []; // An empty array to read inputs
+console.log(
+  "----------------Method 1 output--------------------------------------"
+);
+N = prompt("Enter Number of Elements in Array : ");
+
+//read the array from user
+for (let i = 0; i < N; i++) {
+  temp = i + 1;
+  arr[i] = prompt("Enter element " + temp + " of array: ");
+}
+// select ascending or descending order you want to sort the input array
+input = prompt(`Press "1" for ascending and "2" for Descending :  `);
+if (input == 1) {
+  arr.sort(ascending);
+  console.log("Ascending Sorted Array is : " + arr);
+} else if (input == 2) {
+  arr.sort(descending);
+  console.log("Descending Sorted Array is : " + arr);
+} else if (input != 1 && input != 2) {
+  console.log("!!! Wrong input ,Please try again");
+}
+// =================Method-1 completed ===========================================================
+/* 
+---------Output--(test1 ascending)------------------------------
+Enter No of Elements in Array : 7
+Enter element 1 of array: 96
+Enter element 2 of array: 89
+Enter element 3 of array: 56
+Enter element 4 of array: 89
+Enter element 5 of array: 57
+Enter element 6 of array: 86
+Enter element 7 of array: 5
+Press "1" for ascending and "2" for Descending :  1
+Ascending Sorted Array is : 5,56,57,86,89,89,96
+
+---------Output--(test2 Descending)------------------------------
+Enter No of Elements in Array : 7
+Enter element 1 of array: 89
+Enter element 2 of array: 65
+Enter element 3 of array: 4
+Enter element 4 of array: 3
+Enter element 5 of array: 58
+Enter element 6 of array: 78
+Enter element 7 of array: 96
+Press "1" for ascending and "2" for Descending :  2
+Descending Sorted Array is : 96,89,78,65,58,4,3
+*/
+
+//==================Method-2==Alternate Traditional Method using Bubblesort algorithm============
+//Function Declaration
+function bubbleSort(Array) {
+  let len = Array.length;
+  for (let i = 0; i < len; i++) {
+    //you can also use "for in", so you don't need the variable "len"
+    for (let j = 0; j < len; j++) {
+      if (Array[j] > Array[j + 1]) {
+        let tmp = Array[j];
+        Array[j] = Array[j + 1];
+        Array[j + 1] = tmp;
+      }
+    }
+  }
+  return Array;
+}
+Arry = [8, 5, 6, 3]; //array initialisation
+console.log(
+  "----------------Method 2 output--------------------------------------"
+);
+console.log("input array is " + Arry);
+console.log("Ascending order sorted Array is " + bubbleSort(Arry));
+
+/* 
+------------output---------------
+input array is 8,5,6,3
+Ascending sorted Array is 3,5,6,8
+
+*/
+// ======================================================================
+
+           </code></p>
+        </pre>
+    </div>
+    <h2 class="heading container">Week-6-Day5-Assignment</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+// run in Browser
+
+/* 
+week6-Day5-Assignment
+
+Input: digits = [1,2,3]
+Output: [1,2,4]
+Explanation: The array represents the integer 123.
+Incrementing by one gives 123 + 1 = 124.
+Thus, the result should be [1,2,4]. 
+
+*/
+
+function simple(digits) {
+  if (!digits || digits.length == 0) return [];
+  for (let i = digits.length - 1; i >= 0; i--) {
+    if (digits[i] < 9) {
+      //998->999  989->990
+      digits[i]++; //units place digit is
+      return digits;
+    } else {
+      digits[i] = 0;
+    }
+  }
+  //only special case 999-> 1000
+  let thousand = new Array(digits.length).fill(0);
+  thousand.unshift(1); //add 1 in head of arr
+  return thousand;
+}
+
+digits = [6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3, 7, 8];
+
+console.log(simple(digits));
+
+           </code></p>
+        </pre>
+    </div>
+    <h2 class="heading container">Week-7-Day5-Assignment</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+            /* 
+Q-1) Write a program to create a copy of an object, like, obj2 = obj1 edit any property of obj2, 
+and see if the change is reflected to obj1 or not?
+Explain your observation.
+week7-Day5 Assignment
+
+*/
+//Create an object of Tshirt
+const Tshirt1 = {
+  color: "red",
+  size: 33,
+  brand: "Van Heusen",
+  usage: "Male",
+};
+
+Tshirt2 = Tshirt1; //copied to another object Tshirt2
+console.log("\n Original Objects ");
+console.log(`Tshirt1 ${JSON.stringify(Tshirt1)}`);
+console.log(`Tshirt2 ${JSON.stringify(Tshirt2)}`);
+Tshirt2.color = "blue"; //Changing color of Tshirt2
+Tshirt2.size = 14; //Changing size of Tshirt2
+//changes were made in Tshirt2 only 
+
+console.log("\n Modified Object ");
+console.log(`Tshirt1 ${JSON.stringify(Tshirt1)}`);
+console.log(`Tshirt2 ${JSON.stringify(Tshirt2)}`);
+console.log("----------------------------------------------------------------");
+console.log("\n Observation :Changes in Tshirt2 reflects in Tshirt1 also ");
+console.log(` if we use the assignment operator for Duplicating arrays, 
+ it will not copy the value.Instead, both object variables will refer to the same object in the memory
+ As it creates a shallow copy of objects which points to the same reference in the memory.`);
+
+/* 
+------------------Output---------------------------------------------
+
+ Original Objects 
+Tshirt1 {"color":"red","size":33,"brand":"Van Heusen","usage":"Male"}
+Tshirt2 {"color":"red","size":33,"brand":"Van Heusen","usage":"Male"}
+
+ Modified Object
+Tshirt1 {"color":"blue","size":14,"brand":"Van Heusen","usage":"Male"}
+Tshirt2 {"color":"blue","size":14,"brand":"Van Heusen","usage":"Male"}
+----------------------------------------------------------------------
+
+ Observation :Changes in Tshirt2 reflects in Tshirt1 also
+ if we use the assignment operator for Duplicating arrays,
+ it will not copy the value.Instead, both object variables will refer to the same object in the memory
+ As it creates a shallow copy of objects which points to the same reference in the memory.
+================================================================================================================
+ Observation From Above Program :Changes in Tshirt1 reflects in Tshirt2 also 
+ and Changes in Tshirt2 reflects in Tshirt1 also.
+ if we use the assignment operator for Duplicating arrays, 
+ it will not copy the value.Instead both object variables will refer to the same object in the memory
+ As it creates a shallow copy of objects which points to the same reference in the memory.
+ 
+*/
+
+/* 
+
+===================<<<<=OBSERVATION==>>>>=================================================
+ if we use the assignment operator for Duplicating arrays, it will not copy the value. 
+ Instead, both object variables will refer to the same object in the memory
+ As it creates a shallow copy of objects which points to the same reference in the memory.
+ What are deep and shallow copies?
+ In Shallow copy, a copy of the original object is stored and 
+ only the reference address is finally copied
+
+ we can use "Spread Operator" to resolve this problem
+
+
+ ==========================================================================================
+*/
+
+           </code></p>
+        </pre>
+    </div>
+
+    <h2 class="heading container">Week-10-Day5-Assignment-Q.1</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+
+/* 
+week10 day5 assignment Q.1
+Write a function that reverses a string. 
+The input string is given as an array of characters s.
+*/
+
+
+var reverseString = function (s) {
+  if (s.length == 0) {
+    return;
+  }
+  var temp = s[0];
+  s.shift();
+  reverseString(s);
+  s.push(temp);
+  return s; //return the reverse string
+};
+str = ["h", "e", "l", "l", "o"];
+console.log(reverseString(str));
+
+/* 
+----------output-----------
+[ 'o', 'l', 'l', 'e', 'h' ]
+*/
+           </code></p>
+        </pre>
+    </div>
+    <h2 class="heading container">Week-10-Day5-Assignment-Q.2</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+/* 
+week10 day5 assignment Q.2
+The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, 
+such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
+
+F(0) = 0, F(1) = 1
+F(n) = F(n - 1) + F(n - 2), for n > 1.
+Given n, calculate F(n).
+*/
+var fib = function (n) {
+  if (n == 0) return 0;
+  if (n == 1) return 1;
+  return fib(n - 1) + fib(n - 2);
+};
+
+console.log(fib(7)); //finding the 7th term of fib sequence which is 13
+
+/* 
+----Output----
+13
+*/
+           </code></p>
+        </pre>
+    </div>
+    <h2 class="heading container">Week-11-Day5-Assignment</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+/* 
+LC-88. Merge Sorted Array
+
+Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+Output: [1,2,2,3,5,6]
+Explanation: The arrays we are merging are [1,2,3] and [2,5,6].
+The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
+ */
+var merge = function (nums1, m, nums2, n) {
+  let index1 = m - 1;
+  let index2 = n - 1;
+
+  for (let i = n + m - 1; i >= 0 && index2 >= 0; i--) {
+    const num1 = nums1[index1];
+    const num2 = nums2[index2];
+
+    if (index1 >= 0 && num1 > num2) {
+      nums1[i] = num1;
+      index1--;
+    } else {
+      nums1[i] = num2;
+      index2--;
+    }
+  }
+  return nums1;
+};
+
+console.log("Result after Merge: " + merge([2, 4, 6, 8, 10, 13], 2, [7, 9, 15, 49, 63, 72], 4));
+/* 
+Result after Merge: 2,4,7,9,15,49
+ */
+           </code></p>
+        </pre>
+    </div>
+    <h2 class="heading container">Week-12-Day5-Assignment-Q.1</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+/* 
+week13-Day5 assignment
+
+Q1. Create a Student class and initialize it with a name and roll number.
+create an object of that class in the same file and print name and roll
+number.
+
+ */
+class student {
+  constructor(name, rollno) {
+    this.name = name;
+    this.rollno = rollno;
+  }
+  printDetails() {
+    console.log("Name of the Student: " + this.name);
+    console.log("Roll Number is " + this.rollno);
+  }
+}
+x = new student("Mahesh Tiwari", 21);
+x.printDetails();
+y = new student("Rishabh Jain", 14);
+y.printDetails();
+z = new student("Manoj Gupta", 3);
+z.printDetails();
+
+/* 
+-------------output-------------------------
+Name of the Student: Mahesh Tiwari
+Roll Number is 21
+Name of the Student: Rishabh Jain
+Roll Number is 14
+Name of the Student: Manoj Gupta
+Roll Number is 3
+
+*/
+
+           </code></p>
+        </pre>
+    </div>
+    <h2 class="heading container">Week-13-Day5-Assignment-Q.2</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+/* 
+week13-Day5 assignment
+Q2. Create a Student class
+Write the above code to enter details of 10 students, and take input
+from the user.
+Hint: use loops.
+run the program using node js
+*/
+
+//
+// get input from the user.
+//
+let arr = [];
+var prompt = require("prompt-sync")();
+class student {
+    constructor(Name = "", Rollnumber = null) {
+    this.Name = Name;
+    this.Rollnumber = Rollnumber;
+    console.log("----------------------------------");
+    arr.push(this);
+  }
+
+  printDetails() {
+    for (i = 0; i < arr.length - 1; i++) {
+      console.log("Name of the Student: " + arr[i].Name);
+      console.log("Roll Number is " + arr[i].Rollnumber);
+      console.log("----------------------------------");
+    }
+  }
+}
+
+var n = prompt("Enter Total Number of students Details you wish to add: ");
+for (i = 0; i < n; i++) {
+  naam = prompt("Enter Fullname of students" + (i + 1) + ": ");
+  age = prompt("Enter Roll Number of student" + (i + 1) + ": ");
+  x1 = new student(naam, age);
+}
+// console.log(arr);
+x2 = new student();//reading input
+console.log("============Output===================");
+x2.printDetails();//to print desired student data
+/* 
+Enter Total Number of students Details you wish to add: 10
+Enter Fullname of students1: Virat Kohli
+Enter Roll Number of student1: 18
+----------------------------------
+Enter Fullname of students2: Rohit Sharma
+Enter Roll Number of student2: 45
+----------------------------------
+Enter Fullname of students3: KL Rahul
+Enter Roll Number of student3: 1
+----------------------------------
+Enter Fullname of students4: Suryakumar Yadav
+Enter Roll Number of student4: 63
+----------------------------------
+Enter Fullname of students5: Shreyas Iyer
+Enter Roll Number of student5: 41
+----------------------------------
+Enter Fullname of students6: Ishan Kishan
+Enter Roll Number of student6: 32
+----------------------------------
+Enter Fullname of students7: Rishabh Pant
+Enter Roll Number of student7: 17
+----------------------------------
+Enter Fullname of students8: Hardik Pandya
+Enter Roll Number of student8: 33
+----------------------------------
+Enter Fullname of students9: Jasprit Bumrah
+Enter Roll Number of student9: 93
+----------------------------------
+Enter Fullname of students10: Yuzvendra Chahal
+Enter Roll Number of student10: 3
+
+============Output===================
+Name of the Student: Virat Kohli
+Roll Number is 18
+----------------------------------
+Name of the Student: Rohit Sharma
+Roll Number is 45
+----------------------------------
+Name of the Student: KL Rahul
+Roll Number is 1
+----------------------------------
+Name of the Student: Suryakumar Yadav
+Roll Number is 63
+----------------------------------
+Name of the Student: Shreyas Iyer
+Roll Number is 41
+----------------------------------
+Name of the Student: Ishan Kishan
+Roll Number is 32
+----------------------------------
+Name of the Student: Rishabh Pant
+Roll Number is 17
+----------------------------------
+Name of the Student: Hardik Pandya
+Roll Number is 33
+----------------------------------
+Name of the Student: Jasprit Bumrah
+Roll Number is 93
+----------------------------------
+Name of the Student: Yuzvendra Chahal
+Roll Number is 3
+----------------------------------
+*/
+
+
+           </code></p>
+        </pre>
+    </div>
+
+    <h2 class="heading container">Week-14-Day1-Assignment</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+
+
+
+           </code></p>
+        </pre>
+    </div>
+
+    <h2 class="heading container">Week-14-Day1-Assignment</h2>
+    <div class="container">
+      <button class="butt padd" onclick="copyFunction()">One Dark Pro for VS-Code</button>
+    </div>
+    <div class="container">
+      <p id="copy">
+      <pre>
+           <code>
+
+           </code></p>
+        </pre>
+    </div>
+
+
+    <script src="copy.js" async defer></script>
+  </body>
+</html>

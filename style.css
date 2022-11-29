@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+  font-size:x-large;
+}
+.padd {
+  margin-top: 15px;
+}
+h2 {
+  color: aqua;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  border-top-style: dotted;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: solid;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+#navbar {
+  overflow: hidden;
+  background-color: rgb(90, 61, 235);
+}
+.tap{
+    font-family: Helvetica;
+    font-size:30px;
+    font-weight:bold;
+    padding-left:80%;
+    padding-top:5px;
+    color:#f2f2f2
+}
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+  font-family:sans-serif;
+  font-weight: 600;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* button Css */
+.butt {
+  box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  background: linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+  background-color: #ffc477;
+  border-radius: 5px;
+  border: 2px solid #eeb44f;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #cc9f52;
+}
+.butt:hover {
+  background: linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+  background-color: #fb9e25;
+}
+.butt:active {
+  position: relative;
+  top: 1px;
+}
